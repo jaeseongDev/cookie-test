@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<h1>This works!</h1>
+<script>
+  console.log("허허허 ");
+  const test = async () => {
+    // const result = await axios({
+    //   method: 'post',
+    //   url: 'https://www.darass-develop.o-r.kr/api/v1/login/oauth',
+    //   data: {
+    //     oauthProviderName: "kakao",
+    //     oauthAccessToken: "yYlZiwk7Wn93sPx-g7C1DLLQCWms1s_xnadhfgo9dBEAAAF7FvimXQ"
+    //   },
+    //   withCredentials: true
+    // });
+    // const result = await axios.post('http://15.164.229.190:8080/api/v1/login/oauth',
+    //     {
+    //       oauthProviderName: "kakao",
+    //       oauthAccessToken: "yYlZiwk7Wn93sPx-g7C1DLLQCWms1s_xnadhfgo9dBEAAAF7FvimXQ"
+    //     },
+    //     { withCredentials: true });
+
+    const result2 = await axios({
+      method: 'get',
+      url: 'https://www.darass-develop.o-r.kr/api/v1/test',
+      withCredentials: true
+    });
+
+    const result3 = await axios({
+      method: 'get',
+      url: 'https://www.darass-develop.o-r.kr/api/v1/test2'
+    });
+
+    // console.log(result);
+    console.log(result2);
+    console.log(result3);
+  }
+  test();
+
+</script>
+</body>
+</html>
